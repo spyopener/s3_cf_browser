@@ -1,24 +1,12 @@
-# README
+List s3 objects shared through CloudFront
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Docker
 
-Things you may want to cover:
+## Build image
 
-* Ruby version
+```shell
+docker build -t spyopener/s3_cf_browser:latest .
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Run
+docker run --rm -p 8080:9292 spyopener/s3_cf_browser
