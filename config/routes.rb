@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  root 'buckets#index'
+  resources :buckets
+  resources :distributions
+
+  root 'distributions#index'
 end

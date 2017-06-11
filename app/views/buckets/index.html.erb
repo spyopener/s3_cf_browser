@@ -1,5 +1,5 @@
 <h1>s3 buckets</h1>
 
 <% @buckets.each do |e| %>
-  <h2><%= e %></h2> 
+  <h2><%= link_to e, bucket_path(e) %></h2> 
 <% end %>

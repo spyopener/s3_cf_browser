@@ -1,0 +1,16 @@
+<h1><%= @bucket %></h1>
+
+<% @prefixes.each do |p| %>
+  <p><%= link_to p, bucket_path(@bucket, prefix: p, distribution_alias: @distribution_alias) %></p>
+<% end %>
+
+<% @keys.each_with_index do |k| %>
+  <p>
+    <%= link_to k,
+        "#{'https://' + @distribution_alias + '/' + CGI.escape(k)}"
+    %>
+    <button class="clipboard-btn btn btn-default btn-xs" data-clipboard-action="copy" data-clipboard-text= <%= "#{'https://' + @distribution_alias + '/' + CGI.escape(k)}" %>>
+      Copier le lien
+    </button>
+  </p>
+<% end %>

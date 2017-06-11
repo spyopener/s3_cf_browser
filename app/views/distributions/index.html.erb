@@ -1,0 +1,5 @@
+<h1>Distributions</h1>
+
+<% @distributions.each do |e| %>
+  <h2><%= link_to e[:aliases].join(', '), bucket_path(e[:bucket], distribution_alias: e[:aliases].first)  %></h2> 
+<% end %>
